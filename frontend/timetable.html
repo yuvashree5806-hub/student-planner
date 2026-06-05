@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Timetable – Study Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo"></div>
+        <div>
+          <div class="brand-title">Study Planner</div>
+          <div class="brand-sub">Student dashboard</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="nav-section-title">Main</div>
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="subjects.html" class="nav-link">Subjects</a>
+        <a href="timetable.html" class="nav-link active">Timetable</a>
+        <a href="tasks.html" class="nav-link">Tasks</a>
+        <a href="calendar.html" class="nav-link">Calendar</a>
+
+        <div class="nav-section-title">Tools</div>
+        <a href="timer.html" class="nav-link">Timer</a>
+        <a href="stopwatch.html" class="nav-link">Stopwatch</a>
+        <a href="reminders.html" class="nav-link">Reminders</a>
+        <a href="#" class="nav-link" id="logout-btn">Logout</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="page-header">
+        <div>
+          <div class="page-title">Timetable</div>
+          <div class="page-subtitle">Plan your weekly classes.</div>
+        </div>
+      </header>
+
+      <section class="card">
+        <div class="card-title">Add timetable entry</div>
+        <form id="tt-form">
+          <div class="form-row three">
+            <div>
+              <label for="tt-day">Day</label>
+              <select id="tt-day" name="day" required>
+                <option value="">Select day</option>
+                <option>Mon</option>
+                <option>Tue</option>
+                <option>Wed</option>
+                <option>Thu</option>
+                <option>Fri</option>
+                <option>Sat</option>
+                <option>Sun</option>
+              </select>
+            </div>
+            <div>
+              <label for="tt-start">Start time</label>
+              <input id="tt-start" type="time" name="start" required />
+            </div>
+            <div>
+              <label for="tt-end">End time</label>
+              <input id="tt-end" type="time" name="end" required />
+            </div>
+          </div>
+
+          <div class="form-row two">
+            <div>
+              <label for="tt-subject">Subject</label>
+              <select id="tt-subject" name="subjectId" required></select>
+            </div>
+            <div>
+              <label for="tt-room">Room</label>
+              <input id="tt-room" name="room" placeholder="e.g. Lab-3" />
+            </div>
+          </div>
+
+          <button type="submit" class="btn">Save entry</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="card-title">Weekly timetable</div>
+        <p id="tt-empty" class="text-muted">No timetable entries yet.</p>
+        <table class="table" id="tt-table" style="display:none;">
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Time</th>
+              <th>Subject</th>
+              <th>Room</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tt-body"></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/main.js"></script>
+  <script src="assets/timetable.js"></script>
+</body>
+</html>

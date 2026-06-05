@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Timer – Study Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+  <div class="app-shell">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo"></div>
+        <div>
+          <div class="brand-title">Study Planner</div>
+          <div class="brand-sub">Student dashboard</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="nav-section-title">Main</div>
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="subjects.html" class="nav-link">Subjects</a>
+        <a href="timetable.html" class="nav-link">Timetable</a>
+        <a href="tasks.html" class="nav-link">Tasks</a>
+        <a href="calendar.html" class="nav-link">Calendar</a>
+
+        <div class="nav-section-title">Tools</div>
+        <a href="timer.html" class="nav-link active">Timer</a>
+        <a href="stopwatch.html" class="nav-link">Stopwatch</a>
+        <a href="reminders.html" class="nav-link">Reminders</a>
+        <a href="#" class="nav-link" id="logout-btn">Logout</a>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+      <header class="page-header">
+        <div>
+          <div class="page-title">Timer</div>
+          <div class="page-subtitle">Focus with a simple study timer.</div>
+        </div>
+      </header>
+
+      <!-- Timer Section -->
+      <section class="card" style="text-align:center;">
+
+        <div class="card-title">Study Timer</div>
+
+        <div class="timer-display" id="timer-display">25:00</div>
+
+        <div class="timer-controls">
+          <button class="btn" id="start-btn">Start</button>
+          <button class="btn btn-secondary" id="pause-btn">Pause</button>
+          <button class="btn btn-danger" id="reset-btn">Reset</button>
+        </div>
+
+        <div style="margin-top: 18px;">
+          <label for="custom-min">Custom Minutes:</label>
+          <input type="number" id="custom-min" min="1" max="180" placeholder="Enter minutes" 
+                 style="width:140px; padding:6px; margin-left:8px;" />
+          <button class="btn btn-secondary" id="set-custom">Set</button>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <script src="assets/main.js"></script>
+  <script src="assets/timer.js"></script>
+</body>
+</html>

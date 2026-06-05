@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Subjects – Study Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo"></div>
+        <div>
+          <div class="brand-title">Study Planner</div>
+          <div class="brand-sub">Student dashboard</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="nav-section-title">Main</div>
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="subjects.html" class="nav-link active">Subjects</a>
+        <a href="timetable.html" class="nav-link">Timetable</a>
+        <a href="tasks.html" class="nav-link">Tasks</a>
+        <a href="calendar.html" class="nav-link">Calendar</a>
+
+        <div class="nav-section-title">Tools</div>
+        <a href="timer.html" class="nav-link">Timer</a>
+        <a href="stopwatch.html" class="nav-link">Stopwatch</a>
+        <a href="reminders.html" class="nav-link">Reminders</a>
+        <a href="#" class="nav-link" id="logout-btn">Logout</a>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <header class="page-header">
+        <div>
+          <div class="page-title">Subjects</div>
+          <div class="page-subtitle">Keep track of all your subjects.</div>
+        </div>
+      </header>
+
+      <section class="card">
+        <div class="card-title">Add subject</div>
+        <form id="subject-form">
+          <div class="form-row two">
+            <div>
+              <label for="sub-name">Subject name</label>
+              <input id="sub-name" name="name" required placeholder="e.g. Data Structures" />
+            </div>
+            <div>
+              <label for="sub-code">Code</label>
+              <input id="sub-code" name="code" placeholder="e.g. CS201" />
+            </div>
+          </div>
+
+          <div class="form-row two">
+            <div>
+              <label for="sub-teacher">Teacher</label>
+              <input id="sub-teacher" name="teacher" placeholder="e.g. Dr. Sharma" />
+            </div>
+            <div>
+              <label for="sub-color">Color</label>
+              <input id="sub-color" name="color" type="color" value="#2563eb" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="sub-notes">Notes</label>
+              <textarea id="sub-notes" name="notes" placeholder="Syllabus, exam pattern…"></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn">Save subject</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="card-title">Your subjects</div>
+        <p id="subjects-empty" class="text-muted">No subjects yet.</p>
+        <table class="table" id="subjects-table" style="display:none;">
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Code</th>
+              <th>Teacher</th>
+              <th>Created</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="subjects-body"></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/main.js"></script>
+  <script src="assets/subjects.js"></script>
+</body>
+</html>

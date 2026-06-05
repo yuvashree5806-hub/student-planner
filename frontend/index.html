@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard – Study Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+  <div class="app-shell">
+
+    <!-- Sidebar -->
+     
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo"></div>
+        <div>
+          <div class="brand-title">Study Planner</div>
+          <div class="brand-sub">Student dashboard</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="nav-section-title">Main</div>
+        <a href="index.html" class="nav-link active">Dashboard</a>
+        <a href="subjects.html" class="nav-link">Subjects</a>
+        <a href="timetable.html" class="nav-link">Timetable</a>
+        <a href="tasks.html" class="nav-link">Tasks</a>
+        <a href="calendar.html" class="nav-link">Calendar</a>
+
+        <div class="nav-section-title">Tools</div>
+        <a href="timer.html" class="nav-link">Timer</a>
+        <a href="stopwatch.html" class="nav-link">Stopwatch</a>
+        <a href="reminders.html" class="nav-link">Reminders</a>
+        <a href="#" class="nav-link" id="logout-btn">Logout</a>
+
+      </div>
+    </aside>
+
+
+    <!-- Main -->
+    <main class="main">
+
+      <header class="page-header">
+        <div>
+          <div class="page-title">Dashboard</div>
+          <div class="page-subtitle">Overview of today’s schedule and tasks.</div>
+        </div>
+      </header>
+
+      <!-- Quick Stats -->
+      <section class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-num" id="stat-subjects">0</div>
+          <div class="stat-label">Subjects</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-num" id="stat-tasks">0</div>
+          <div class="stat-label">Total Tasks</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-num" id="stat-today-tasks">0</div>
+          <div class="stat-label">Tasks Today</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-num" id="stat-reminders">0</div>
+          <div class="stat-label">Reminders</div>
+        </div>
+      </section>
+
+      <!-- Today's Classes -->
+      <section class="card">
+        <div class="card-title">Today's Classes</div>
+        <p class="text-muted" id="today-classes-empty">No classes today.</p>
+        <ul id="today-classes-list"></ul>
+      </section>
+
+      <!-- Tasks Due Today -->
+      <section class="card">
+        <div class="card-title">Tasks Due Today</div>
+        <p class="text-muted" id="tasks-today-empty">No tasks due today.</p>
+        <ul id="tasks-today-list"></ul>
+      </section>
+
+      <!-- Upcoming Deadlines -->
+      <section class="card">
+        <div class="card-title">Upcoming Deadlines</div>
+        <p class="text-muted" id="deadlines-empty">No upcoming tasks.</p>
+        <ul id="deadlines-list"></ul>
+      </section>
+
+      <!-- Upcoming Reminders -->
+      <section class="card">
+        <div class="card-title">Upcoming Reminders</div>
+        <p class="text-muted" id="reminders-empty-list">No reminders.</p>
+        <ul id="reminders-list"></ul>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="assets/main.js"></script>
+  <script src="assets/dashboard.js"></script>
+</body>
+</html>

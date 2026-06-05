@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register – Study Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="auth-page">
+    <div class="auth-card card">
+      <div class="auth-brand">
+        <div class="brand-logo"></div>
+        <div>
+          <div class="brand-title">Study Planner</div>
+          <div class="brand-sub">Create your account</div>
+        </div>
+      </div>
+
+      <form id="register-form">
+        <div class="form-row">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required autocomplete="name" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required minlength="6" autocomplete="new-password" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label for="password-confirm">Confirm password</label>
+            <input type="password" id="password-confirm" name="password-confirm" required minlength="6" autocomplete="new-password" />
+          </div>
+        </div>
+        <p class="auth-error" id="auth-error" role="alert"></p>
+        <button type="submit" class="btn auth-submit">Create account</button>
+      </form>
+
+      <p class="auth-footer">
+        Already have an account? <a href="login.html">Sign in</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="assets/auth.js"></script>
+</body>
+</html>

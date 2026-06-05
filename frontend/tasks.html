@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tasks – Study Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo"></div>
+        <div>
+          <div class="brand-title">Study Planner</div>
+          <div class="brand-sub">Student dashboard</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="nav-section-title">Main</div>
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="subjects.html" class="nav-link">Subjects</a>
+        <a href="timetable.html" class="nav-link">Timetable</a>
+        <a href="tasks.html" class="nav-link active">Tasks</a>
+        <a href="calendar.html" class="nav-link">Calendar</a>
+
+        <div class="nav-section-title">Tools</div>
+        <a href="timer.html" class="nav-link">Timer</a>
+        <a href="stopwatch.html" class="nav-link">Stopwatch</a>
+        <a href="reminders.html" class="nav-link">Reminders</a>
+        <a href="#" class="nav-link" id="logout-btn">Logout</a>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <header class="page-header">
+        <div>
+          <div class="page-title">Tasks</div>
+          <div class="page-subtitle">Track all your assignments, homework, and study tasks.</div>
+        </div>
+      </header>
+
+      <!-- Add Task -->
+      <section class="card">
+        <div class="card-title">Add task</div>
+        <form id="task-form">
+          
+          <div class="form-row two">
+            <div>
+              <label for="task-title">Title</label>
+              <input id="task-title" name="title" required placeholder="e.g. Assignment 3" />
+            </div>
+            <div>
+              <label for="task-subject">Subject</label>
+              <select id="task-subject" name="subjectId" required></select>
+            </div>
+          </div>
+
+          <div class="form-row two">
+            <div>
+              <label for="task-deadline">Deadline</label>
+              <input id="task-deadline" type="date" name="deadline" required />
+            </div>
+            <div>
+              <label for="task-status">Status</label>
+              <select id="task-status" name="status" required>
+                <option value="pending">Pending</option>
+                <option value="in-progress">In Progress</option>
+                <option value="completed">Completed</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="task-notes">Notes</label>
+              <textarea id="task-notes" name="notes" placeholder="Task details…"></textarea>
+            </div>
+          </div>
+
+          <button class="btn" type="submit">Save task</button>
+        </form>
+      </section>
+
+      <!-- Task List -->
+      <section class="card">
+        <div class="card-title">Your tasks</div>
+        <p class="text-muted" id="tasks-empty">No tasks yet.</p>
+
+        <table class="table" id="tasks-table" style="display:none;">
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Subject</th>
+              <th>Deadline</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tasks-body"></tbody>
+        </table>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="assets/main.js"></script>
+  <script src="assets/tasks.js"></script>
+</body>
+</html>

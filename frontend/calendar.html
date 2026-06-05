@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calendar – Study Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+  <div class="app-shell">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo"></div>
+        <div>
+          <div class="brand-title">Study Planner</div>
+          <div class="brand-sub">Student dashboard</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="nav-section-title">Main</div>
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="subjects.html" class="nav-link">Subjects</a>
+        <a href="timetable.html" class="nav-link">Timetable</a>
+        <a href="tasks.html" class="nav-link">Tasks</a>
+        <a href="calendar.html" class="nav-link active">Calendar</a>
+
+        <div class="nav-section-title">Tools</div>
+        <a href="timer.html" class="nav-link">Timer</a>
+        <a href="stopwatch.html" class="nav-link">Stopwatch</a>
+        <a href="reminders.html" class="nav-link">Reminders</a>
+        <a href="#" class="nav-link" id="logout-btn">Logout</a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+
+      <header class="page-header">
+        <div>
+          <div class="page-title">Calendar</div>
+          <div class="page-subtitle">See deadlines and upcoming study activities.</div>
+        </div>
+      </header>
+
+      <section class="card">
+        <!-- Calendar Controls -->
+        <div class="calendar-header">
+          <button class="btn-secondary cal-btn" id="prev-month">‹</button>
+          <div class="calendar-title" id="calendar-title"></div>
+          <button class="btn-secondary cal-btn" id="next-month">›</button>
+        </div>
+
+        <!-- Calendar Grid -->
+        <div class="calendar-grid" id="calendar-grid"></div>
+
+      </section>
+
+      <!-- Popup Modal -->
+      <div id="calendar-modal" class="modal hidden">
+        <div class="modal-content">
+          <h3 id="modal-date"></h3>
+          <div id="modal-events"></div>
+          <button class="btn btn-secondary" id="close-modal">Close</button>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="assets/main.js"></script>
+  <script src="assets/calendar.js"></script>
+</body>
+</html>

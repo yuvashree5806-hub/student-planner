@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stopwatch – Study Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+  <div class="app-shell">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo"></div>
+        <div>
+          <div class="brand-title">Study Planner</div>
+          <div class="brand-sub">Student dashboard</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="nav-section-title">Main</div>
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="subjects.html" class="nav-link">Subjects</a>
+        <a href="timetable.html" class="nav-link">Timetable</a>
+        <a href="tasks.html" class="nav-link">Tasks</a>
+        <a href="calendar.html" class="nav-link">Calendar</a>
+
+        <div class="nav-section-title">Tools</div>
+        <a href="timer.html" class="nav-link">Timer</a>
+        <a href="stopwatch.html" class="nav-link active">Stopwatch</a>
+        <a href="reminders.html" class="nav-link">Reminders</a>
+        <a href="#" class="nav-link" id="logout-btn">Logout</a>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+      <header class="page-header">
+        <div>
+          <div class="page-title">Stopwatch</div>
+          <div class="page-subtitle">Track study sessions or speed tasks.</div>
+        </div>
+      </header>
+
+      <!-- Stopwatch block -->
+      <section class="card" style="text-align:center;">
+
+        <div class="timer-display" id="sw-display">00:00.00</div>
+
+        <div class="timer-controls">
+          <button class="btn" id="sw-start">Start</button>
+          <button class="btn btn-secondary" id="sw-stop">Stop</button>
+          <button class="btn btn-danger" id="sw-reset">Reset</button>
+          <button class="btn btn-secondary" id="sw-lap">Lap</button>
+        </div>
+      </section>
+
+      <!-- Laps -->
+      <section class="card">
+        <div class="card-title">Lap Times</div>
+        <p class="text-muted" id="laps-empty">No laps yet.</p>
+
+        <table class="table" id="laps-table" style="display:none;">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody id="laps-body"></tbody>
+        </table>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="assets/main.js"></script>
+  <script src="assets/stopwatch.js"></script>
+</body>
+</html>

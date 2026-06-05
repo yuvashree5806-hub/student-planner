@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reminders – Study Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+  <div class="app-shell">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo"></div>
+        <div>
+          <div class="brand-title">Study Planner</div>
+          <div class="brand-sub">Student dashboard</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="nav-section-title">Main</div>
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="subjects.html" class="nav-link">Subjects</a>
+        <a href="timetable.html" class="nav-link">Timetable</a>
+        <a href="tasks.html" class="nav-link">Tasks</a>
+        <a href="calendar.html" class="nav-link">Calendar</a>
+
+        <div class="nav-section-title">Tools</div>
+        <a href="timer.html" class="nav-link">Timer</a>
+        <a href="stopwatch.html" class="nav-link">Stopwatch</a>
+        <a href="reminders.html" class="nav-link active">Reminders</a>
+        <a href="#" class="nav-link" id="logout-btn">Logout</a>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <header class="page-header">
+        <div>
+          <div class="page-title">Reminders</div>
+          <div class="page-subtitle">Set reminders for important tasks and deadlines.</div>
+        </div>
+      </header>
+
+      <!-- Add Reminder -->
+      <section class="card">
+        <div class="card-title">Add reminder</div>
+
+        <p class="text-muted" id="reminders-help"></p>
+
+        <form id="reminder-form">
+          <div class="form-row two">
+            <div>
+              <label for="rem-task">Task</label>
+              <select id="rem-task" name="taskId" required></select>
+            </div>
+            <div>
+              <label for="rem-when">Remind at</label>
+              <input id="rem-when" type="datetime-local" name="remindAt" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="rem-message">Message</label>
+              <textarea id="rem-message" name="message" placeholder="e.g. Submit assignment before 11:59 PM"></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn">Save reminder</button>
+        </form>
+      </section>
+
+      <!-- Reminder List -->
+      <section class="card">
+        <div class="card-title">Your reminders</div>
+        <p class="text-muted" id="reminders-empty">No reminders yet.</p>
+
+        <table class="table" id="reminders-table" style="display:none;">
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Remind at</th>
+              <th>Message</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="reminders-body"></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/main.js"></script>
+  <script src="assets/reminders.js"></script>
+</body>
+</html>
