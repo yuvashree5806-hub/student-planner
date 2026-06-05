@@ -124,15 +124,6 @@ Open `index.html` in your browser or use Live Server in VS Code.
 - Cloud deployment
 - AI-powered study planner
 
-## 📸 Screenshots
-Add screenshots of:
-- Dashboard
-- Timetable
-- Task Manager
-- Calendar
-- Stopwatch
-- Timer
-
 ## 🤝 Contributing
 Contributions are welcome. Feel free to fork the repository and submit pull requests.
 
